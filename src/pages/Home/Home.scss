@@ -1,0 +1,114 @@
+.home {
+  margin: 0;
+  position: relative;
+  height: 100vh;
+  .nav {
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+  }
+  .not {
+    display: none;
+  }
+  .slide {
+    display: none;
+  }
+
+  .cont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .top {
+      height: 30vh;
+
+      img {
+        border-radius: 20px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      background-color: antiquewhite;
+    }
+    .middle {
+      height: 15vh;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ul {
+        list-style: none;
+        display: flex;
+
+        gap: 1rem;
+      }
+    }
+    .bottom {
+      height: 50vh;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .not {
+      display: none;
+    }
+    .slide {
+      z-index: 12;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      background-color: beige;
+      height: 100vh;
+      position: fixed;
+      .component {
+        ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          align-items: left;
+          .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aliceblue;
+            margin-right: 10px;
+            border-radius: 20px;
+
+            li {
+              font: 1em sans-serif;
+              margin-block: 1rem;
+
+              .icon {
+                font-size: 1.5rem;
+                padding: 2px;
+              }
+            }
+          }
+        }
+      }
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+          font-size: 1.5rem;
+          position: absolute;
+          left: 1rem;
+          color: red;
+          cursor: pointer;
+        }
+        h1 {
+          font-size: 2.5rem;
+          span {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
